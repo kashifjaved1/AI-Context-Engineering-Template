@@ -1,0 +1,13 @@
+# Cursor Rules Configuration
+
+You are working in a repository configured with structured Context Engineering.
+
+Canonical project instructions, invariants, and guardrails are defined in:
+👉 AGENTS.md
+
+Always adhere to these rules:
+1. Consult AGENTS.md for universal invariants and security rules.
+2. Check contextrc.json to discover the relevant architecture docs and domain rules for the files you are modifying.
+3. Search the existing codebase first to reuse existing utilities, models, and patterns.
+4. Keep modifications minimal, clean, and tested.
+5. Store temporary notes and working drafts in .ai/ (git-ignored).

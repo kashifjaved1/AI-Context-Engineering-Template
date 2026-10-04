@@ -1,0 +1,21 @@
+---
+description: Universal project rules and context engineering instructions
+globs: *
+alwaysApply: true
+---
+
+# Project Rules & Context Guidance
+
+This project follows structured Context Engineering principles.
+
+## Reference Links
+- Canonical Rules: [AGENTS.md](../../AGENTS.md)
+- Context Router: [contextrc.json](../../contextrc.json)
+- Architecture Docs: [context/architecture/](../../context/architecture/)
+- Coding Guidelines: [context/guidelines/](../../context/guidelines/)
+
+## Core Guidelines
+- **Security**: Never log, leak, or create mock versions of sensitive secrets, keys, or private customer data.
+- **Anti-Duplication**: Review existing code before authoring new functions or components. Reuse existing patterns.
+- **Verification**: Always run or advise running relevant tests and linters after introducing code modifications.
+- **Transient Files**: Keep temporary scratch work in `.ai/`, which is ignored by version control.

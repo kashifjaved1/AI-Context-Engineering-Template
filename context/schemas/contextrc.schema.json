@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContextRouteManifest",
+  "description": "Configuration schema for mapping codebase paths to AI context documents",
+  "type": "object",
+  "properties": {
+    "version": { "type": "string" },
+    "projectName": { "type": "string" },
+    "description": { "type": "string" },
+    "defaultContext": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "areas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "parentArea": { "type": "string" },
+          "applyTo": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "contextFiles": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["name", "description", "applyTo", "contextFiles"]
+      }
+    }
+  },
+  "required": ["version", "projectName", "areas"]
+}

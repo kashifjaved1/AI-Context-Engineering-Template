@@ -1,0 +1,36 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.pfx
+
+# Ephemeral AI Scratchpad & Runtime Output
+.ai/*
+!.ai/.gitignore
+!.ai/README.md
+
+# Common OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build & Dependency Artifacts (Universal Defaults)
+node_modules/
+dist/
+build/
+bin/
+obj/
+out/
+target/
+__pycache__/
+*.pyc
+.venv/
+venv/

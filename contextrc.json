@@ -1,0 +1,92 @@
+{
+  "$schema": "./context/schemas/contextrc.schema.json",
+  "version": "1.0.0",
+  "projectName": "generic-project-template",
+  "description": "Context routing manifest for AI coding agents and developers. Maps code paths to relevant architecture, domain rules, and guidelines.",
+  "defaultContext": [
+    "AGENTS.md",
+    "context/architecture/overview.md"
+  ],
+  "areas": [
+    {
+      "name": "authentication",
+      "description": "User authentication, JWT token validation, SSO, and session management",
+      "applyTo": [
+        "src/auth/**",
+        "src/**/auth/**",
+        "lib/security/**"
+      ],
+      "contextFiles": [
+        "context/guidelines/security.md",
+        "context/domain/invariants.md"
+      ]
+    },
+    {
+      "name": "api-gateway",
+      "description": "API ingress, routing, rate limiting, and reverse proxy layer",
+      "applyTo": [
+        "src/gateway/**",
+        "src/api/routes/**",
+        "src/controllers/**"
+      ],
+      "contextFiles": [
+        "context/architecture/boundaries.md",
+        "context/guidelines/coding-standards.md"
+      ]
+    },
+    {
+      "name": "domain-core",
+      "description": "Core business domain logic, workflows, and calculations",
+      "applyTo": [
+        "src/domain/**",
+        "src/core/**",
+        "src/services/**"
+      ],
+      "contextFiles": [
+        "context/domain/glossary.md",
+        "context/domain/invariants.md",
+        "context/guidelines/coding-standards.md"
+      ]
+    },
+    {
+      "name": "persistence",
+      "description": "Database access, migrations, entities, and repository implementations",
+      "applyTo": [
+        "src/database/**",
+        "src/repositories/**",
+        "migrations/**",
+        "prisma/**"
+      ],
+      "contextFiles": [
+        "context/domain/invariants.md",
+        "context/guidelines/coding-standards.md"
+      ]
+    },
+    {
+      "name": "background-workers",
+      "description": "Asynchronous job workers, message queue consumers, and event handlers",
+      "applyTo": [
+        "src/workers/**",
+        "src/jobs/**",
+        "src/consumers/**"
+      ],
+      "contextFiles": [
+        "context/architecture/overview.md",
+        "context/architecture/boundaries.md"
+      ]
+    },
+    {
+      "name": "testing",
+      "description": "Automated tests (unit, integration, and end-to-end suites)",
+      "applyTo": [
+        "test/**",
+        "tests/**",
+        "**/*.test.*",
+        "**/*.spec.*"
+      ],
+      "contextFiles": [
+        "context/guidelines/testing.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "chat.promptFilesRecommendations": {
+    ".github/prompts/pr-review.prompt.md": true,
+    ".github/prompts/spec-generate.prompt.md": true,
+    ".github/prompts/adr-create.prompt.md": true,
+    ".github/prompts/test-gen.prompt.md": true
+  },
+  "chat.tools.terminal.autoApprove": {
+    "scripts/": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true
+}
